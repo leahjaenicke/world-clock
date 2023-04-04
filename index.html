@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body>
@@ -22,24 +24,24 @@
       <div class="cities">
         <div class="capital faded">
           <h2>New York🇺🇸</h2>
-          <div class="time">20:15:18</div>
-          <div class="date">Sun 2 Apr</div>
+          <div class="time" id="newYorkTime">20:15:18</div>
+          <div class="date" id="newYorkDate">Sun 2 Apr</div>
         </div>
         <div class="capital middle">
           <h2>London🇬🇧</h2>
-          <div class="time">20:15:18</div>
-          <div class="date">Sun 2 Apr</div>
+          <div class="time" id="londonTime">20:15:18</div>
+          <div class="date" id="londonDate">Sun 2 Apr</div>
         </div>
         <div class="capital faded">
           <h2>Tel Aviv🇮🇱</h2>
-          <div class="time">20:15:18</div>
-          <div class="date">Sun 2 Apr</div>
+          <div class="time" id="telAvivTime">20:15:18</div>
+          <div class="date" id="telAvivDate">Sun 2 Apr</div>
         </div>
       </div>
     </div>
     <footer>
-      <a href="https://github.com/leahjaenicke/world-clock">Open Source</a> code
-      by Leah Jaenicke
+      <a href="https://github.com/leahjaenicke/world-clock">open-sourced</a>
+      code by Leah Jaenicke
     </footer>
     <script src="java/index.js"></script>
   </body>
