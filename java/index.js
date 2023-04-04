@@ -28,9 +28,6 @@ currentime();
 setInterval(currentime, 1000);
 
 function newcity(event) {
-  if (event.target.value.length === 0) {
-    currentime();
-  }
   let originalplace = event.target.value;
   let capital = originalplace.split("/")[1];
   let citychange = document.querySelector(".cities");

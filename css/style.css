@@ -4,7 +4,10 @@ body {
     "Lucida Sans", Arial, sans-serif;
 }
 
-h1 {
+a {
+  text-decoration: none;
+  font-size: 32px;
+
   margin: 18px;
 }
 h2 {
