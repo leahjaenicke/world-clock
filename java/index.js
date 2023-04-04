@@ -29,6 +29,9 @@ setInterval(currentime, 1000);
 
 function newcity(event) {
   let originalplace = event.target.value;
+  if (event.target.value === "location") {
+    originalplace = moment.tz.guess();
+  }
   let capital = originalplace.split("/")[1];
   let citychange = document.querySelector(".cities");
   let newtime = moment().tz(originalplace);
@@ -40,6 +43,9 @@ function newcity(event) {
       <div class="date">${newtime.format("ddd D MMM")}</div>
     </div>
     `;
+
+  let h5 = document.querySelector("h5");
+  h5.innerHTML = "⬇️ back to homepage";
 }
 
 let citydropdown = document.querySelector("#city");
