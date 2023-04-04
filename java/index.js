@@ -26,3 +26,24 @@ function currentime() {
 
 currentime();
 setInterval(currentime, 1000);
+
+function newcity(event) {
+  if (event.target.value.length === 0) {
+    currentime();
+  }
+  let originalplace = event.target.value;
+  let capital = originalplace.split("/")[1];
+  let citychange = document.querySelector(".cities");
+  let newtime = moment().tz(originalplace);
+
+  citychange.innerHTML = `
+    <div class="capital middle">
+      <h2>${capital}</h2>
+      <div class="time">${newtime.format("HH:mm:ss")}</div>
+      <div class="date">${newtime.format("ddd D MMM")}</div>
+    </div>
+    `;
+}
+
+let citydropdown = document.querySelector("#city");
+citydropdown.addEventListener("change", newcity);
